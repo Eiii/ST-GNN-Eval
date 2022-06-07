@@ -1,0 +1,6 @@
+{
+  "problem_type": "TrafficMETR",
+  "base": "/nfs/hpc/share/merriler/data/traffic/METR-LA",
+  "normalize": true,
+  "spectral": false
+}

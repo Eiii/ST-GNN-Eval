@@ -1,0 +1,10 @@
+{
+  "neighborhood_sizes": [32, 32, 32],
+  "latent_sizes": [64, 64, 64],
+  "target_size": 64,
+  "combine_hidden": [128, 128],
+  "edge_hidden": [64, 64, 64],
+  "decode_hidden": [64, 64, 64],
+  "neighbors": 8,
+  "timesteps": 8
+}

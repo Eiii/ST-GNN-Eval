@@ -1,0 +1,10 @@
+{
+  "epochs": 2,
+  "sched": "lrtest",
+  "optim": "adam",
+  "lr": 1e2,
+  "min_lr": 1e-8,
+  "disable_valid": true,
+  "report_every": 0.04,
+  "num_workers": 4
+}

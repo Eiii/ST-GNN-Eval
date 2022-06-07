@@ -1,0 +1,11 @@
+{
+  "epochs": 4,
+  "sched": "cos",
+  "period": 60,
+  "optim": "adam",
+  "lr": 0.01,
+  "report_every": 0.01,
+  "valid_every": 0.1,
+  "num_workers": 4,
+  "clip_grad": 5
+}

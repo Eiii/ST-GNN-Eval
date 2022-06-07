@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-traffic-lrtests",
+    "problem_args": "problem/traffic-default.json",
+    "entries": [
+        {
+            "name": "Pre-TPC-Large",
+            "train_args": {
+                "BASE": "train/traffic-lrtest-pre.json",
+                "batch_size": 16
+            },
+            "net_args": {
+                "BASE": "net/tpc-large.json",
+                "net_type": "TrafficTPC"
+            }
+        },
+        {
+            "name": "TPC-Large",
+            "train_args": {
+                "BASE": "train/traffic-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 16
+            },
+            "net_args": {
+                "BASE": "net/tpc-large.json",
+                "net_type": "TrafficTPC"
+            }
+        }
+    ]
+}

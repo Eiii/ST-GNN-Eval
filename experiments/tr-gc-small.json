@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-tr-final",
+    "problem_args": "problem/traffic-default.json",
+    "entries": [
+        {
+            "name": "GC-Small",
+            "train_args": {
+                "BASE": "train/traffic-default.json",
+                "batch_size": 50,
+                "min_lr": 1e-08,
+                "lr": 0.0009886284693058313
+            },
+            "net_args": {
+                "BASE": "net/gc-small.json",
+                "net_type": "TrafficGraphConv"
+            }
+        }
+    ]
+}

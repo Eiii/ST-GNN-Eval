@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-tr-final",
+    "problem_args": "problem/traffic-default.json",
+    "entries": [
+        {
+            "name": "TPC-Small",
+            "train_args": {
+                "BASE": "train/traffic-default.json",
+                "batch_size": 40,
+                "min_lr": 1e-08,
+                "lr": 0.000999999999999999
+            },
+            "net_args": {
+                "BASE": "net/tpc-small.json",
+                "net_type": "TrafficTPC"
+            }
+        }
+    ]
+}

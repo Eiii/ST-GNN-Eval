@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-we-lrtests",
+    "problem_args": "problem/weather-default.json",
+    "entries": [
+        {
+            "name": "Pre-TGC-Large",
+            "train_args": {
+                "BASE": "train/weather-lrtest-pre.json",
+                "batch_size": 2
+            },
+            "net_args": {
+                "BASE": "net/gc-large.json",
+                "net_type": "WeatherGC"
+            }
+        },
+        {
+            "name": "TGC-Large",
+            "train_args": {
+                "BASE": "train/weather-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 2
+            },
+            "net_args": {
+                "BASE": "net/gc-large.json",
+                "net_type": "WeatherGC"
+            }
+        }
+    ]
+}

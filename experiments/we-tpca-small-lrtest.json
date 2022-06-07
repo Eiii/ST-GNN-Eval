@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-we-lrtests",
+    "problem_args": "problem/weather-default.json",
+    "entries": [
+        {
+          "name": "Pre-TPCA-Small",
+          "train_args": {
+            "BASE": "train/weather-lrtest-pre.json",
+            "batch_size": 32
+          },
+          "net_args": {
+            "BASE": "net/tpca-small.json",
+            "net_type": "WeatherTPC"
+          }
+        },
+        {
+            "name": "TPCA-Small",
+            "train_args": {
+                "BASE": "train/weather-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 32
+            },
+            "net_args": {
+                "BASE": "net/tpca-small.json",
+                "net_type": "WeatherTPC"
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-traffic-lrtests",
+    "problem_args": "problem/traffic-default.json",
+    "entries": [
+        {
+          "name": "Pre-TPCA-Med",
+          "train_args": {
+            "BASE": "train/traffic-lrtest-pre.json",
+            "batch_size": 40
+          },
+          "net_args": {
+            "BASE": "net/tpca-med.json",
+            "net_type": "TrafficTPC"
+          }
+        },
+        {
+            "name": "TPCA-Med",
+            "train_args": {
+                "BASE": "train/traffic-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 40
+            },
+            "net_args": {
+                "BASE": "net/tpca-med.json",
+                "net_type": "TrafficTPC"
+            }
+        }
+    ]
+}

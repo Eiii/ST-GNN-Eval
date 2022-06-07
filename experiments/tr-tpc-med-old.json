@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-tr-lrdemo",
+    "problem_args": "problem/traffic-default.json",
+    "entries": [
+        {
+            "name": "TPC-Med-Old",
+            "train_args": {
+                "BASE": "train/traffic-demo.json",
+                "batch_size": 40,
+                "min_lr": 6.233069749206182e-06,
+                "lr": 0.24966116536630553
+            },
+            "net_args": {
+                "BASE": "net/tpc-med.json",
+                "net_type": "TrafficTPC"
+            }
+        }
+    ]
+}

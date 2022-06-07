@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-sc-lrtests",
+    "problem_args": "problem/sc-default.json",
+    "entries": [
+        {
+            "name": "Pre-TPC-Large",
+            "train_args": {
+                "BASE": "train/sc-lrtest-pre.json",
+                "batch_size": 64
+            },
+            "net_args": {
+                "BASE": "net/tpc-large.json",
+                "net_type": "SC2TPC"
+            }
+        },
+        {
+            "name": "TPC-Large",
+            "train_args": {
+                "BASE": "train/sc-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 64
+            },
+            "net_args": {
+                "BASE": "net/tpc-large.json",
+                "net_type": "SC2TPC"
+            }
+        }
+    ]
+}

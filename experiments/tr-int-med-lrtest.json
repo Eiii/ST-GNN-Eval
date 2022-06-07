@@ -1,0 +1,30 @@
+{
+  "output_path": "/nfs/hpc/share/merriler/output/t-traffic-lrtests",
+  "problem_args": "problem/traffic-default.json",
+  "entries": [
+    {
+      "name": "Pre-TInt-Med",
+      "train_args": {
+        "BASE": "train/traffic-lrtest-pre.json",
+        "batch_size": 18
+      },
+      "net_args": {
+        "BASE": "net/int-med.json",
+        "net_type": "TrafficInteraction"
+      }
+    },
+    {
+      "name": "TInt-Med",
+      "train_args": {
+        "BASE": "train/traffic-lrtest.json",
+        "reset_net": "[PREV_OUTPUT]",
+        "batch_size": 18
+      },
+      "net_args": {
+        "BASE": "net/int-med.json",
+        "net_type": "TrafficInteraction"
+      }
+    }
+  ]
+}
+  

@@ -1,0 +1,29 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-we-lrtests",
+    "problem_args": "problem/weather-default.json",
+    "entries": [
+        {
+          "name": "Pre-TInt-Large",
+          "train_args": {
+            "BASE": "train/weather-lrtest-pre.json",
+            "batch_size": 4
+          },
+          "net_args": {
+            "BASE": "net/int-large.json",
+            "net_type": "WeatherInteraction"
+          }
+        },
+        {
+            "name": "TInt-Large",
+            "train_args": {
+                "BASE": "train/weather-lrtest.json",
+                "reset_net": "[PREV_OUTPUT]",
+                "batch_size": 4
+            },
+            "net_args": {
+                "BASE": "net/int-large.json",
+                "net_type": "WeatherInteraction"
+            }
+        }
+    ]
+}

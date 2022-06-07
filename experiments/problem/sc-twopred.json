@@ -1,0 +1,11 @@
+{
+  "problem_type": "StarcraftScene",
+  "data_path": "/nfs/hpc/share/merriler/data/sc2scene",
+  "num_pred": 2,
+  "max_hist": 5,
+  "hist_dist": "uniform",
+  "hist_dist_args": {"max": 10},
+  "pred_dist": "fixed",
+  "pred_dist_args": {"ts": [2, 7]},
+  "frame_skip": 5
+}

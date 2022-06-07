@@ -1,0 +1,9 @@
+{
+  "epochs": 0.5,
+  "sched": "none",
+  "optim": "adam",
+  "lr": 0.001,
+  "disable_valid": true,
+  "report_every": 0.01,
+  "num_workers": 4
+}

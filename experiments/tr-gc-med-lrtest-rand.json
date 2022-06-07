@@ -1,0 +1,19 @@
+{
+  "output_path": "/nfs/hpc/share/merriler/output/t-traffic-lrtests",
+  "problem_args": "problem/traffic-default.json",
+  "entries": [
+    {
+      "name": "GC-Med-Rand",
+      "train_args": {
+        "BASE": "train/traffic-lrtest.json",
+        "reset_net": true,
+        "batch_size": 40
+      },
+      "net_args": {
+        "BASE": "net/gc-med.json",
+        "net_type": "TrafficGraphConv"
+      }
+    }
+  ]
+}
+  

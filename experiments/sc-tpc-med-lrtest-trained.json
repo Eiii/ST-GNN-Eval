@@ -1,0 +1,47 @@
+{
+  "experiment_path": "/nfs/hpc/share/merriler/output/t-sc-lrtest2",
+  "problem_type": "StarcraftScene",
+  "problem_args": {
+    "data_path": "/nfs/hpc/share/merriler/data/sc2scene",
+    "num_pred": 4,
+    "max_hist": 5,
+    "hist_dist": "uniform",
+    "hist_dist_args": {"max": 10},
+    "pred_dist": "fixed",
+    "pred_dist_args": {"ts": [1, 2, 4, 7]},
+    "frame_skip": 5
+  },
+  "epochs": 1,
+  "entries": [
+    {
+      "name": "TPC-Med-Trained",
+      "net": "SC2TPC",
+      "train_args": {
+        "sched": "lrtest",
+        "reset_net": "/nfs/hpc/share/merriler/output/t-sc-run1/TPC-Med:17c768c3c0b94e36912731f0a4fd7458.pkl",
+        "lr_max_epochs": 1,
+        "optim": "adam",
+        "lr": 0.01,
+        "batch_size": 150,
+        "report_every": 0.005,
+        "valid_every": 0.05,
+        "disable_valid": true,
+        "num_workers": 4,
+        "clip_grad": 5
+      },
+      "net_args": {
+        "neighborhood_sizes": [32, 32, 32],
+        "latent_sizes": [32, 64, 64],
+        "target_size": 64,
+        "combine_hidden": [64, 64],
+        "weight_hidden": [16, 32, 32],
+        "c_mid": 32,
+        "final_hidden": [64, 64, 64],
+        "decode_hidden": [64, 64, 64],
+        "neighbors": 8
+      },
+      "repeat": 1
+    }
+  ]
+}
+  

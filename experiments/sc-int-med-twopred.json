@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-sc-final",
+    "problem_args": "problem/sc-twopred.json",
+    "entries": [
+        {
+            "name": "TInt-Med-TwoPred",
+            "train_args": {
+                "BASE": "train/sc-default.json",
+                "batch_size": 128,
+                "lr": 0.0006300751998255917,
+                "min_lr": 2.5079359106181356e-06
+            },
+            "net_args": {
+                "BASE": "net/int-med.json",
+                "net_type": "SC2Interaction"
+            }
+        }
+    ]
+}

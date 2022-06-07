@@ -1,0 +1,34 @@
+{
+  "experiment_path": "/nfs/hpc/share/merriler/output/spectral",
+  "problem_type": "TrafficMETR",
+  "problem_args": {
+    "base": "/nfs/hpc/share/merriler/data/traffic/METR-LA",
+    "normalize": false,
+    "spectral": false
+  },
+  "epochs": 5,
+  "entries": [
+    {
+      "name": "TrafficZero",
+      "net": "TrafficZero",
+      "train_args": {
+        "batch_size": 32,
+        "lr": 0.003,
+        "sched": "none",
+        "report_every": 0.01,
+        "valid_every": 0.1
+      },
+      "net_args": {
+        "neighborhood_sizes": [16, 32, 64, 64],
+        "latent_sizes": [32, 32, 64, 64],
+        "target_size": 64,
+        "combine_hidden": [64, 64],
+        "decode_hidden": [64, 64, 64],
+        "neighbors": 8,
+        "timesteps": 4
+      },
+      "repeat": 1
+    }
+  ]
+}
+  

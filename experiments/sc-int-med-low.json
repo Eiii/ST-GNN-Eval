@@ -1,0 +1,42 @@
+{
+  "experiment_path": "/nfs/hpc/share/merriler/output/t-sc-lrrun1",
+  "problem_type": "StarcraftScene",
+  "problem_args": {
+    "data_path": "/nfs/hpc/share/merriler/data/sc2scene",
+    "num_pred": 4,
+    "max_hist": 5,
+    "hist_dist": "uniform",
+    "hist_dist_args": {"max": 10},
+    "pred_dist": "fixed",
+    "pred_dist_args": {"ts": [1, 2, 4, 7]},
+    "frame_skip": 5
+  },
+  "epochs": 1,
+  "entries": [
+    {
+      "name": "TInt-Med-low",
+      "net": "SC2Interaction",
+      "train_args": {
+        "sched": "none",
+        "optim": "adam",
+        "lr": 0.0000035,
+        "batch_size": 128,
+        "report_every": 0.005,
+        "valid_every": 0.05,
+        "num_workers": 4,
+        "clip_grad": 5
+      },
+      "net_args": {
+        "neighborhood_sizes": [64, 64, 64],
+        "latent_sizes": [128, 128, 128],
+        "target_size": 128,
+        "combine_hidden": [256, 256],
+        "edge_hidden": [128, 128, 128],
+        "decode_hidden": [128, 128, 128],
+        "neighbors": 8
+      },
+      "repeat": 1
+    }
+  ]
+}
+  

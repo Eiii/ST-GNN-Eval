@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-sc-final",
+    "problem_args": "problem/sc-default.json",
+    "entries": [
+        {
+            "name": "TPC-Large",
+            "train_args": {
+                "BASE": "train/sc-default.json",
+                "batch_size": 64,
+                "lr": 0.0006307476218293773,
+                "min_lr": 2.511468936358518e-06
+            },
+            "net_args": {
+                "BASE": "net/tpc-large.json",
+                "net_type": "SC2TPC"
+            }
+        }
+    ]
+}

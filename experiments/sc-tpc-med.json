@@ -1,0 +1,19 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-sc-final",
+    "problem_args": "problem/sc-default.json",
+    "entries": [
+        {
+            "name": "TPC-Med",
+            "train_args": {
+                "BASE": "train/sc-default.json",
+                "batch_size": 150,
+                "lr": 0.0009993766944458727,
+                "min_lr": 6.300138861482548e-08
+            },
+            "net_args": {
+                "BASE": "net/tpc-med.json",
+                "net_type": "SC2TPC"
+            }
+        }
+    ]
+}

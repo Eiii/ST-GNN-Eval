@@ -1,0 +1,20 @@
+{
+    "output_path": "/nfs/hpc/share/merriler/output/t-we-final",
+    "problem_args": "problem/weather-default.json",
+    "entries": [
+        {
+            "name": "TInt-Med-Drop2",
+            "train_args": {
+                "BASE": "train/weather-default.json",
+                "batch_size": 20,
+                "min_lr": 1.0000000000000008e-05,
+                "lr": 0.003152038760084842
+            },
+            "net_args": {
+                "BASE": "net/int-med.json",
+                "station_dropout": 0.2,
+                "net_type": "WeatherInteraction"
+            }
+        }
+    ]
+}
